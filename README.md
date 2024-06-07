@@ -19,6 +19,9 @@ Api Demo
 <img width="869" alt="Screenshot 2024-06-07 at 10 02 03 PM" src="https://github.com/suzeetkarn/Fitpage-Backend-Assignment/assets/34273202/5c7cbe59-8e34-486b-ad47-32c4e21605c3">
 
 3).**Get Location By Id**
+
+<img width="845" alt="Screenshot 2024-06-07 at 10 25 44 PM" src="https://github.com/suzeetkarn/Fitpage-Backend-Assignment/assets/34273202/62c6af81-0325-40d1-920b-f78dfbee024e">
+
 <img width="877" alt="Screenshot 2024-06-07 at 10 03 53 PM" src="https://github.com/suzeetkarn/Fitpage-Backend-Assignment/assets/34273202/85a15fd9-4897-4343-8c0f-cdc5434f6518">
 
 4). **Update Location**
