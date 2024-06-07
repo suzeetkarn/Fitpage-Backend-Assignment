@@ -20,8 +20,6 @@ Api Demo
 
 3).**Get Location By Id**
 
-<img width="845" alt="Screenshot 2024-06-07 at 10 25 44 PM" src="https://github.com/suzeetkarn/Fitpage-Backend-Assignment/assets/34273202/62c6af81-0325-40d1-920b-f78dfbee024e">
-
 <img width="877" alt="Screenshot 2024-06-07 at 10 03 53 PM" src="https://github.com/suzeetkarn/Fitpage-Backend-Assignment/assets/34273202/85a15fd9-4897-4343-8c0f-cdc5434f6518">
 
 4). **Update Location**
@@ -32,6 +30,9 @@ Api Demo
 <img width="864" alt="Screenshot 2024-06-07 at 10 06 39 PM" src="https://github.com/suzeetkarn/Fitpage-Backend-Assignment/assets/34273202/4672f477-3dde-4930-a4dc-dde2fa68b874">
 
 6). **Get Weather By Location Id**
+
+<img width="845" alt="Screenshot 2024-06-07 at 10 25 44 PM" src="https://github.com/suzeetkarn/Fitpage-Backend-Assignment/assets/34273202/62c6af81-0325-40d1-920b-f78dfbee024e">
+
 <img width="851" alt="Screenshot 2024-06-07 at 10 26 52 PM" src="https://github.com/suzeetkarn/Fitpage-Backend-Assignment/assets/34273202/1c19d02a-6c8f-40b8-b950-453878ef34bd">
 
 7). **Get Historical Weather Data**
