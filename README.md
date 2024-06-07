@@ -25,10 +25,9 @@ Api Demo
 <img width="864" alt="Screenshot 2024-06-07 at 10 05 44 PM" src="https://github.com/suzeetkarn/Fitpage-Backend-Assignment/assets/34273202/c348b4b0-7a5a-4fe3-8168-5088ff61bddf">
 
 5).**Delete Location**
-<img width="864" alt="Screenshot 2024-06-07 at 10 05 44 PM" src="https://github.com/suzeetkarn/Fitpage-Backend-Assignment/assets/34273202/c453b27d-8c01-49ad-988b-7ed40dade215">
+<img width="864" alt="Screenshot 2024-06-07 at 10 06 39 PM" src="https://github.com/suzeetkarn/Fitpage-Backend-Assignment/assets/34273202/4672f477-3dde-4930-a4dc-dde2fa68b874">
 
 6). **Get Weather By Location Id**
-<img width="864" alt="Screenshot 2024-06-07 at 10 06 39 PM" src="https://github.com/suzeetkarn/Fitpage-Backend-Assignment/assets/34273202/54c44797-7b5b-4396-b82c-2b4ac2d9fd09">
 <img width="851" alt="Screenshot 2024-06-07 at 10 26 52 PM" src="https://github.com/suzeetkarn/Fitpage-Backend-Assignment/assets/34273202/1c19d02a-6c8f-40b8-b950-453878ef34bd">
 
 7). **Get Historical Weather Data**
