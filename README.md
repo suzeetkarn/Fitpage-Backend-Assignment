@@ -25,6 +25,7 @@ Api Demo
 <img width="864" alt="Screenshot 2024-06-07 at 10 05 44 PM" src="https://github.com/suzeetkarn/Fitpage-Backend-Assignment/assets/34273202/c348b4b0-7a5a-4fe3-8168-5088ff61bddf">
 
 5).**Delete Location**
+
 <img width="864" alt="Screenshot 2024-06-07 at 10 06 39 PM" src="https://github.com/suzeetkarn/Fitpage-Backend-Assignment/assets/34273202/4672f477-3dde-4930-a4dc-dde2fa68b874">
 
 6). **Get Weather By Location Id**
