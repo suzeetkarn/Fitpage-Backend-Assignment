@@ -9,7 +9,6 @@ const redisClient = createRedisClient();
   await redisClient.connect();
 })();
 
-
 exports.getWeatherByLocationId = async (req, res, next) => {
   try {
     const location = await Location.findById(req.params.location_id);
@@ -33,8 +32,8 @@ exports.getWeatherByLocationId = async (req, res, next) => {
       });
     }
 
-    const weatherData = response.data;
-    await redisClient.set(cacheKey, JSON.stringify(weatherData), "EX", 600);
+    const weatherData = response;
+    await redisClient.set(cacheKey, JSON.stringify(weatherData), "EX", 3600);
 
     res.json(weatherData);
   } catch (error) {

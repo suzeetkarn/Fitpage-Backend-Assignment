@@ -1,15 +1,17 @@
 const axios = require("axios");
-const { wheatherApiKey, wheatherHistoryApiUrl } = require("../../config/vars");
+const { wheatherApiKey, wheatherHistoryApiUrl, wheatherApiUrl } = require("../../config/vars");
 
 const getWeatherData = async (latitude, longitude) => {
   try {
+    console.log("latitude, longitude",latitude, longitude);
     const response = await axios.get(wheatherApiUrl, {
       params: {
         key: wheatherApiKey,
         q: `${latitude},${longitude}`,
       },
     });
-    if (resp && !resp.isAxiosError) {
+    console.log("response.data",response.data);
+    if (response) {
       return response.data;
     }
   } catch (error) {
