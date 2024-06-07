@@ -1,4 +1,4 @@
-const mongoose = require('../../config/mongoose');
+const mongoose = require('../../config/mogoose');
 const { v4: uuidv4 } = require('uuid');
 const APIError = require('../errors/api-error');
 const httpStatus = require('http-status');

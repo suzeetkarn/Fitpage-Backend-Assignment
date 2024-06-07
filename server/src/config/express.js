@@ -7,7 +7,7 @@ const morgan = require("morgan");
 const cors = require('cors');
 const { logs } = require('./vars');
 const routes = require('../api/routes/v1');
-const error = require('../api/middlewares/error');
+const error = require("../api/middlewares/error")
 const app = express();
 
 // request logging. dev: console | production: file
@@ -30,8 +30,6 @@ app.use(helmet());
 
 // enable CORS - Cross Origin Resource Sharing
 app.use(cors());
-app.use(passport.initialize());
-passport.use('jwt', strategies.jwt);
 
 app.use('/v1', routes);
 

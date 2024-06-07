@@ -1,14 +1,6 @@
-const Location = require("../model/location.model");
+const Location = require("../../model/location.model");
 const httpStatus = require("http-status");
 const APIError = require("../../errors/api-error");
-const { wheatherApiKey } = require("../../config/vars");
-
-const { createRedisClient } = require("../../config/redis");
-
-const redisClient = createRedisClient();
-(async () => {
-  await redisClient.connect();
-})();
 
 ////////////////////----Location API's (GET,POST, UPDATE, DELETE)----/////////////////////////////
 
@@ -24,6 +16,14 @@ exports.getAllLocations = async (req, res, next) => {
 exports.addLocation = async (req, res, next) => {
   try {
     const { name, latitude, longitude } = req.body;
+    const existingLocation = await Location.findOne({
+      name,
+      latitude,
+      longitude,
+    });
+    if (existingLocation) {
+      return res.status(400).json({ error: "Location already present" });
+    }
     const newLocation = await Location.createLocation(
       name,
       latitude,
@@ -38,6 +38,7 @@ exports.addLocation = async (req, res, next) => {
 exports.getLocationById = async (req, res, next) => {
   try {
     const location = await Location.getLocationById(req.params.location_id);
+    console.log("location===========",location);
     if (location) {
       res.json(location);
     } else {
@@ -89,38 +90,3 @@ exports.deleteLocation = async (req, res, next) => {
   }
 };
 
-/////////////////////////////---Weather API---/////////////////////////////
-
-exports.getWeatherByLocationId = async (req, res, next) => {
-  try {
-    const location = await Location.findById(req.params.location_id);
-    if (!location) return res.status(404).json({ error: "Location not found" });
-
-    const cacheKey = `${location.latitude},${location.longitude}`;
-    const cachedWeather = await redisClient.get(cacheKey);
-
-    if (cachedWeather) {
-      return res.json(JSON.parse(cachedWeather));
-    }
-
-    const response = await axios.get(process.env.WEATHER_API_URL, {
-      params: {
-        key: wheatherApiKey,
-        q: `${location.latitude},${location.longitude}`,
-      },
-    });
-    if (!response) {
-      throw new APIError({
-        message: "Internal server error",
-        status: httpStatus.INTERNAL_SERVER_ERROR,
-      });
-    }
-
-    const weatherData = response.data;
-    await redisClient.set(cacheKey, JSON.stringify(weatherData), "EX", 86400);
-
-    res.json(weatherData);
-  } catch (error) {
-    return next(error);
-  }
-};
