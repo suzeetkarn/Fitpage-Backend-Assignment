@@ -9,7 +9,7 @@ const redisClient = createRedisClient();
 
 exports.getPastWeatherData = async (req, res) => {
   try {
-    const location = await Location.findById(req.params.location_id);
+    const location = await Location.findOne({ uid: req.params.location_id });
     if (!location) return res.status(404).json({ error: "Location not found" });
     const { days } = req.query;
     const dayRange = parseInt(days);
