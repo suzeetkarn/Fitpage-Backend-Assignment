@@ -2,8 +2,6 @@ const Location = require("../../model/location.model");
 const httpStatus = require("http-status");
 const APIError = require("../../errors/api-error");
 
-////////////////////----Location API's (GET,POST, UPDATE, DELETE)----/////////////////////////////
-
 exports.getAllLocations = async (req, res, next) => {
   try {
     const locations = await Location.getAllLocations();
@@ -38,7 +36,6 @@ exports.addLocation = async (req, res, next) => {
 exports.getLocationById = async (req, res, next) => {
   try {
     const location = await Location.getLocationById(req.params.location_id);
-    console.log("location===========",location);
     if (location) {
       res.json(location);
     } else {
@@ -89,4 +86,3 @@ exports.deleteLocation = async (req, res, next) => {
     return next(error);
   }
 };
-

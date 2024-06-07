@@ -3,10 +3,7 @@ const controller = require("../../../controllers/location");
 
 const router = express.Router();
 
-router
-  .route("/")
-  .get(controller.getAllLocations)
-  .post(controller.addLocation);
+router.route("/").get(controller.getAllLocations).post(controller.addLocation);
 
 router
   .route("/:location_id")
